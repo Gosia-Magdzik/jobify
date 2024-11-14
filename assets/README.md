@@ -1,52 +1,6 @@
 
 
 ```tsx
-import { authMiddleware } from '@clerk/nextjs';
-
-// This example protects all routes including api/trpc routes
-// Please edit this to allow other routes to be public as needed.
-// See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your Middleware
-export default authMiddleware({
-  publicRoutes: ['/'],
-});
-
-export const config = {
-  matcher: ['/((?!.+\\.[\\w]+$|_next).*)', '/', '/(api|trpc)(.*)'],
-};
-```
-
-## Challenge - Build the links.tsx Component
-
-1. **Create File and Import necessary modules and components:**
-
-   - create utils/links.tsx
-   - Import the `AreaChart`, `Layers`, and `AppWindow` components from 'lucide-react' for displaying icons.
-
-2. **Define the `NavLink` type:**
-
-   - This type has three properties: `href` (a string), `label` (a string), and `icon` (a React Node).
-
-3. **Define the `links` constant:**
-
-   - This constant is an array of `NavLink` objects.
-   - Each object represents a navigation link with a `href`, `label`, and `icon`.
-
-4. **Define the navigation links:**
-
-   - The first link has a `href` of '/add-job', a `label` of 'add job', and an `icon` of `<Layers />`.
-   - The second link has a `href` of '/jobs', a `label` of 'all jobs', and an `icon` of `<AppWindow />`.
-   - The third link has a `href` of '/stats', a `label` of 'stats', and an `icon` is not defined yet.
-
-5. **Export the `links` constant:**
-   - This constant can be imported in other components to create navigation menus.
-
-## Links Data
-
-- create utils/links.tsx
-
-utils/links.tsx
-
-```tsx
 import { AreaChart, Layers, AppWindow } from 'lucide-react';
 
 type NavLink = {
