@@ -1,98 +1,9 @@
 
 
-```tsx
-import { AreaChart, Layers, AppWindow } from 'lucide-react';
 
-type NavLink = {
-  href: string;
-  label: string;
-  icon: React.ReactNode;
-};
-
-const links: NavLink[] = [
-  {
-    href: '/add-job',
-    label: 'add job',
-    icon: <Layers />,
-  },
-  {
-    href: '/jobs',
-    label: 'all jobs',
-    icon: <AppWindow />,
-  },
-  {
-    href: '/stats',
-    label: 'stats',
-    icon: <AreaChart />,
-  },
-];
-
-export default links;
-```
-
-## Challenge - Dashboard Layout
-
-- create following components :
-
-  - Sidebar
-  - Navbar
-  - LinksDropdown
-  - ThemeToggle
-
-- setup (dashboard/layout.tsx)
-
-1. **Import necessary modules and components:**
-
-   - Import `Navbar` and `Sidebar` components.
-   - Import `PropsWithChildren` from 'react'.
-
-2. **Define the `layout` component:**
-
-   - This component receives `children` as props.
-
-3. **Return the JSX:**
-
-   - The main wrapper is a `main` element with a grid layout.
-   - The first `div` contains the `Sidebar` component and is hidden on small screens.
-   - The second `div` spans 4 columns on large screens and contains the `Navbar` component and the `children`.
-
-4. **Export the `layout` component.**
-   dashboard/layout.tsx
-
-## Dashboard Layout
-
-- create following components :
-
-  - Sidebar
-  - Navbar
-  - LinksDropdown
-  - ThemeToggle
-
-(dashboard/layout.tsx)
 
 ```tsx
-import Navbar from '@/components/Navbar';
-import Sidebar from '@/components/Sidebar';
 
-import { PropsWithChildren } from 'react';
-
-function layout({ children }: PropsWithChildren) {
-  return (
-    <main className='grid lg:grid-cols-5'>
-      {/* first-col hide on small screen */}
-      <div className='hidden lg:block lg:col-span-1 lg:min-h-screen'>
-        <Sidebar />
-      </div>
-      {/* second-col hide dropdown on big screen */}
-
-      <div className='lg:col-span-4'>
-        <Navbar />
-        <div className='py-16 px-4 sm:px-8 lg:px-16'>{children}</div>
-      </div>
-    </main>
-  );
-}
-export default layout;
 ```
 
 ## Challenge - Build Sidebar Component
