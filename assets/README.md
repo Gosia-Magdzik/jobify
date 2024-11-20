@@ -1,46 +1,11 @@
-
-
-
-
-```tsx
-
-```
-
-## Challenge - Build Sidebar Component
-
-1. **Import necessary modules and components:**
-
-   - Import `Logo`, `links`, `Image`, `Link`, `Button`, and `usePathname`.
-
-2. **Define the `Sidebar` component:**
-
-   - Use `usePathname` to get the current route.
-
-3. **Return the JSX:**
-
-   - The main wrapper is an `aside` element.
-   - Inside `aside`, display the `Logo` using `Image`.
    - Map over `links` to create `Button` components for each link.
    - Each `Button` wraps a `Link` that navigates to the link's `href`.
-
-4. **Export the `Sidebar` component.**
 
 ## Sidebar
 
 - render links and logo
 - check the path, if active use different variant
   Sidebar.tsx
-
-```tsx
-'use client';
-import Logo from '@/assets/images/logo.svg';
-import links from '@/utils/links';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Button } from './ui/button';
-import { usePathname } from 'next/navigation';
-function Sidebar() {
-  const pathname = usePathname();
 
   return (
     <aside className='py-4 px-8 bg-muted h-full'>
