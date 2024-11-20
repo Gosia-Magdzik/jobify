@@ -19,7 +19,7 @@ export default function Home() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident suscipit placeat ipsam mollitia tenetur neque ad dicta, officia magni itaque tempora eos asperiores sint rem, explicabo quos at veniam aspernatur.
           </p>
           <Button asChild className="mt-4">
-            <Link href='/add-job'>
+            <Link href='/dashboard/add-job'>
               Get Started
             </Link>
           </Button>
