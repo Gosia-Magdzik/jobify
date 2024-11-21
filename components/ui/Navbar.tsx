@@ -1,8 +1,19 @@
-import React from 'react'
+import LinksDropdown from "./LinksDropdown";
+import { UserButton } from "@clerk/nextjs";
+import ThemeToggle from "./ThemeToggle";
+
 
 function Navbar() {
   return (
-    <h2 className='text-4xl'>Navbar</h2>
+    <nav className=''>
+      <div>
+        <LinksDropdown/>
+      </div>
+      <div>
+        <ThemeToggle/>
+        <UserButton/>
+      </div>
+    </nav>
   )
 }
 
